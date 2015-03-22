@@ -1,0 +1,72 @@
+<!doctype html>
+
+<html>
+<head>
+
+  <meta charset="utf-8">
+
+  <!-- Important stuff for SEO, don't neglect. (And don't dupicate values across your site!) -->
+  <title>Numerology App</title>
+  <meta name="author" content="Adriano Valle" />
+  <meta name="description" content="" />
+
+  <!-- Who owns the content of this site? -->
+  <meta name="Copyright" content="Copyright 2015 Adriano Valle" />
+
+<!-- This is Twitter Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+<!-- This is FontAwesome, for social media icons -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+  <!-- concatenate and minify for production -->
+  <link rel="stylesheet" href="/css/reset.css" />
+  <link rel="stylesheet" href="/css/style.css" />
+
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- not needed? up to you: http://camendesign.com/code/developpeurs_sans_frontieres -->
+
+    <div id="bg">
+      <img src="/img/bg.jpg" alt="Mayan Calendar Wheel">
+    </div>
+
+    <header class="header">
+      <h1>{Ruby}rology <small>A Skillcrush Project in Ruby</small></h1>
+    </header>
+
+    <hr />
+
+    <%= yield %>
+
+    <hr />
+
+    <footer class="footer">
+      <h3>About the Developer</h3>
+      <p class="col-md-7">I'm Adriano, a web developer in NYC. Into HTML5, CSS3, Javascript, jQuery, Ruby, Rails, Bootstrap, Foundation, and Photoshop. Recent General Assembly FEWD alum, currently enrolled in the Ruby on Rails track at Skillcrush.com.</p>
+
+<!-- social media icons -->
+<!--       <ul class="col-md-7 clearfix">
+        <li class="pull-left">
+            <i class="fa fa-twitter"></i>  
+        </li>
+        <li class="pull-left">
+            <i class="fa fa-linkedin"></i>       
+        </li>
+        <li class="pull-left">
+            <i class="fa fa-github"></i>         
+        </li>
+      </ul>
+ -->
+
+      <p class="pull-right"><small>&copy; Adriano Valle 2015. All Rights Reserved.</small></p>
+      
+    </footer>
+
+  </div>
+
+</body>
+</html>
