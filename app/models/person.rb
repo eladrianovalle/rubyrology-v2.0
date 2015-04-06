@@ -8,7 +8,7 @@ def self.valid_birthdate(input)
     end
 end
 
-def self.get_birth_path_number(birthdate)
+def self.get_birth_path_num(birthdate)
     birthdate = birthdate.chars.to_a.map(&:to_i)
 
     number  = birthdate[0] + birthdate[1] + birthdate[2] + birthdate[3] + birthdate[4] + birthdate[5] + birthdate[6] + birthdate[7]
@@ -20,18 +20,18 @@ def self.get_birth_path_number(birthdate)
     end
 
     if number <= 9
-            birth_path_number = number
+            birth_path_num = number
     else
             number = number.to_s.chars.to_a.map(&:to_i)
-            birth_path_number = number[0] + number[1]
+            birth_path_num = number[0] + number[1]
     end
 end
 
-def self.display_message(birth_path_number)
+def self.get_message(birth_path_num)
 
-     message = "Your numerology number is #{birth_path_number}."
+     message = "Your numerology number is #{birth_path_num}."
      
-     case birth_path_number
+     case birth_path_num
         when 1        
             response =  "#{message}\nOne is the leader. The number one indicates the ability to stand alone, and is a strong vibration. Ruled by the Sun."
      
