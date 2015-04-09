@@ -1,2 +1,6 @@
- <h3>You are <%= @person.first_name %> <%= @person.last_name %>, born on <%= @person.birthdate.strftime("%B %d, %Y") %></h3>
- <h2><%= @message %></h2>
+<h3>Reading for <%= @person.first_name %> <%= @person.last_name %>, born on <%= @birthdate %>:</h3>
+<article class="jumbotron">
+
+  <p><%= @message %></p>
+
+</article>

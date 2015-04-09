@@ -1,3 +1,6 @@
+<form action="<%= people_form_action(@person) %>" id="<%= people_form_id(@person) %>" method="post" class="<%= people_form_class(@person) %> form-horizontal">
+  <div class="form-group">
+    <input type="hidden" name="_method" value="<%= people_form_method(@person) %>"/>
     <label for="first_name">First Name:</label>
     <input type="text" class="form-control" name="first_name" value="<%= @person.first_name %>"/>
   </div>
@@ -9,8 +12,12 @@
 
   <div class="form-group">
     <label for="birthdate">Birthdate:</label>
-    <input type="text" class="form-control" name="birthdate" value="<%= @person.birthdate %>"/>
+    <input type="date" class="form-control" name="birthdate" value="<%= @birthdate %>"/>
   </div>
 
+  <hr>
+
   <div class="form-group">
-    <button type="submit" class="btn btn-warning">Submit</button>
+    <button type="submit" class="btn btn-block btn-warning">Submit</button>
+  </div>
+</form>

@@ -1,3 +1,10 @@
+
+ul li a {
+  text-decoration: none;
+  color: white;
+  /*font-size: 1.8rem;*/
+}
+
 #bg {
   position: fixed; 
   top: -50%; 
@@ -18,10 +25,6 @@
   min-height: 50%;
 }
 
-/*.btn-warning {
-  background-color: #e0cda7;
-  border-color: #ac8f57;
-}*/
 .header h1 small {
   color: #86562E !important;
 }
@@ -29,4 +32,8 @@
 .panel {
   background-color: #ab6e3b !important;
   color: #FBF9F8;
+}
+
+.bg-warning {
+  background-color: #ab6e3b !important;
 }

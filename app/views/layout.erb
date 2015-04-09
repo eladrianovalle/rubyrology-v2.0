@@ -22,6 +22,7 @@
   <!-- concatenate and minify for production -->
   <link rel="stylesheet" href="/css/reset.css" />
   <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/people.css">  
 
 </head>
 
@@ -34,6 +35,14 @@
       <img src="/img/bg.jpg" alt="Mayan Calendar Wheel">
     </div>
 
+        <ul class="nav nav-tabs nav-justified bg-warning">
+      <li role="presentation" class=""><a href="http://localhost:9292">Home</a></li>
+      <li role="presentation"><a href="http://localhost:9292/people/new">Create A Person</a></li>
+      <li role="presentation"><a href="http://localhost:9292/people">People Database</a></li>
+    </ul>
+
+    <hr />
+
     <header class="header">
       <h1>{Ruby}rology <small>A Skillcrush Project in Ruby</small></h1>
     </header>
@@ -43,6 +52,14 @@
     <%= yield %>
 
     <hr />
+
+<!--     <ul class="nav nav-tabs nav-justified bg-warning">
+      <li role="presentation" class=""><a href="http://localhost:9292">Home</a></li>
+      <li role="presentation"><a href="http://localhost:9292/people/new">Create A Person</a></li>
+      <li role="presentation"><a href="http://localhost:9292/people">People Database</a></li>
+    </ul>
+
+    <hr /> -->
 
     <footer class="footer">
       <h3>About the Developer</h3>
