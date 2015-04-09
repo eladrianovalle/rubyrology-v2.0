@@ -2,7 +2,15 @@
 ul li a {
   text-decoration: none;
   color: white;
-  /*font-size: 1.8rem;*/
+  font-size: 2rem;
+}
+
+ul li a:hover, .active li {
+  border-radius: 0px !important;
+}
+
+.font--ec {
+  font-family: 'Economica', sans-serif;
 }
 
 #bg {
@@ -26,7 +34,7 @@ ul li a {
 }
 
 .header h1 small {
-  color: #86562E !important;
+  color: #6b4424 !important;
 }
 
 .panel {
@@ -36,4 +44,5 @@ ul li a {
 
 .bg-warning {
   background-color: #ab6e3b !important;
+  border-color: #ab6e3b !important;
 }

@@ -1,7 +1,29 @@
+.font__s--m {
+  font-size: 1.8rem;
+}
+
+.font__s--l {
+  font-size: 3.5rem;
+}
+
 .new-person {
   font-weight: bolder;
 }
  
 .edit-person input {
   font-style: italic;
+}
+
+tr td a:hover, .text--brown, .text--brown:hover, ul li a:hover {
+  color: #6b4424;
+}
+
+.text--blk, tr td a {
+  color: #1a1109;
+}
+
+.btn:hover {
+  background-color: #6b4424 !important;
+  border-color: #6b4424 !important;
+  color: #FBF9F8;
 }

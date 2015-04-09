@@ -1,21 +1,21 @@
-<h1>People</h1>
+<h2 class="font--ec font__s--l">PEOPLE</h2>
 <table class="table table-condensed">
   <thead>
-    <th>Name</th>
-    <th>Birthdate</th>
-    <th>Edit</th>
-    <th>Delete</th>
+    <th class="text--brown">Name</th>
+    <th class="text--brown">Birthdate</th>
+    <th class="text--brown">Edit</th>
+    <th class="text--brown">Delete</th>
   </thead>
   <tbody>
     <% @people.each do |person| %>
-      <tr>
+      <tr class="text--blk">
         <td>
           <a href="<%= "/people/#{person.id}" %>">
             <%= "#{person.first_name} #{person.last_name}" %>
           </a>
         </td>
         <td>
-          <%= "#{person.birthdate}" %>
+          <%= "#{person.birthdate.strftime("%B %d, %Y")}" %>
         </td>
         <td>
           <a href="<%= "/people/#{person.id}/edit" %>">Edit</a>
