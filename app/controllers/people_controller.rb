@@ -13,13 +13,22 @@ end
 post '/people' do
   if params[:birthdate].include?("-")
     birthdate = params[:birthdate]
-  else
+  elsif (params[:birthdate].length == 8 && !params[:birthdate].match(/^[0-9]+[0-9]$/).nil?)
     birthdate = Date.strptime(params[:birthdate], "%m%d%Y")
+  else
+    birthdate = params[:birthdate]
   end
 
-  person = Person.create(first_name: params[:first_name], last_name: params[:last_name], birthdate: birthdate)
-
-  redirect "/people/#{person.id}"
+  @person = Person.new(first_name: params[:first_name], last_name: params[:last_name], birthdate: birthdate)
+  if @person.valid?
+    @person.save
+    redirect "/people/#{@person.id}"
+  else
+    @person.errors.full_messages.each do |message|
+      @errors = "#{@errors} #{message}."
+    end
+    erb :"/people/new"
+  end
 end
 
 get '/people/:id/edit' do
@@ -29,12 +38,19 @@ end
 
 put '/people/:id' do
   # get the record and update the first_name and last_name here...
-  person = Person.find(params[:id])
-  person.first_name = params[:first_name]
-  person.last_name = params[:last_name]
-  person.birthdate = params[:birthdate]
-  person.save
-  redirect "/people/#{person.id}"
+  @person = Person.find(params[:id])
+  @person.first_name = params[:first_name]
+  @person.last_name = params[:last_name]
+  @person.birthdate = params[:birthdate]
+  if @person.valid?
+    @person.save
+    redirect "/people/#{@person.id}"
+  else
+    @person.errors.full_messages.each do |message|
+      @errors = "#{@errors} #{message}"
+    end
+    erb :"/people/edit"
+  end
 end
 
 delete '/people/:id' do

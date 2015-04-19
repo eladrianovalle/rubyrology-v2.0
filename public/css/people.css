@@ -27,3 +27,13 @@ tr td a:hover, .text--brown, .text--brown:hover, ul li a:hover {
   border-color: #6b4424 !important;
   color: #FBF9F8;
 }
+
+.errors {
+  color: red;
+}
+
+.error {
+  font-style: oblique;
+  /*text-shadow: 0 2px 5px #000000;*/
+  color: white;
+}
